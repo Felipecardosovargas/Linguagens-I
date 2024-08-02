@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Exemplo 1 - Formulários</title>
+<style>
+    body {
+        background-color: #1e1e1e;
+        color: #fff;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        transition: all 0.3s ease;
+    }
+    h1 {
+        text-align: center;
+        font-size: 36px;
+        margin-top: 20px;
+        transition: all 0.3s ease;
+    }
+    form {
+        text-align: center;
+        margin-top: 20px;
+        transition: all 0.3s ease;
+    }
+    input[type="text"],
+    input[type="password"],
+    input[type="radio"],
+    input[type="checkbox"] {
+        margin: 5px;
+        padding: 8px;
+        border-radius: 5px;
+        border: 1px solid #555;
+        transition: all 0.3s ease;
+    }
+    input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+        transition: all 0.3s ease;
+    }
+    th, td {
+        border: 1px solid #555;
+        padding: 8px;
+        text-align: left;
+        transition: all 0.3s ease;
+    }
+    th {
+        background-color: #333;
+        color: #fff;
+        transition: all 0.3s ease;
+    }
+    img {
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 600px;
+        height: auto;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        transition: all 0.3s ease;
+    }
+</style>
+</head>
+<body>
+    <center>
+        <img src="imagem.jpg" alt="Logo IF">
+        <h1>Bem vindo ao cadastro nacional de Nerds</h1>
+    </center>
+    <form name="contato" onsubmit="event.preventDefault(); atualizarTabela()">
+        Informe seu nome: <input type="text" name="nome" id="nome" value="" size="30" maxlength="30"><br>
+        Digite a senha: <input type="password" name="senha" id="senha" size="10" maxlength="8"><br>
+        Gosta de:<br>
+        <input type="radio" name="radbut" value="D&D" checked> D&D
+        <input type="radio" name="radbut" value="Star wars"> Star Wars
+        <input type="radio" name="radbut" value="Games"> Games
+        <input type="radio" name="radbut" value="Filmes"> Filmes
+        <input type="radio" name="radbut" value="Anime"> Anime<br>
+        Elo no Lol:<br>
+        <input type="checkbox" name="teste" value="Mestre"> Mestre
+        <input type="checkbox" name="teste" value="Campião"> Campião<br>
+        <input type="submit" value="Enviar">
+    </form>
+    <div>
+        <table id="tabela">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Idade</th>
+                    <th>Profissão</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Felipe</td>
+                    <td>16 anos</td>
+                    <td>Mestre de D&D</td>
+                </tr>
+                <tr>
+                    <td>Hofman</td>
+                    <td>16 anos</td>
+                    <td>Desenhador</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script>
+        function atualizarTabela() {
+            var nome = document.getElementById("nome").value;
+            var senha = document.getElementById("senha").value;
+            var profissao = prompt("Digite sua profissão:");
+            var idade = prompt("Digite sua idade:");
+
+            var tabela = document.getElementById("tabela").getElementsByTagName('tbody')[0];
+            var novaLinha = tabela.insertRow(-1);
+            var colNome = novaLinha.insertCell(0);
+            var colIdade = novaLinha.insertCell(1);
+            var colProfissao = novaLinha.insertCell(2);
+
+            colNome.innerHTML = nome;
+            colIdade.innerHTML = idade + " anos";
+            colProfissao.innerHTML = profissao;
+        }
+    </script>
+</body>
+</html>

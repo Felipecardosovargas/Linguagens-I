@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="Exemplo2.css">
+<title>Formulário de Login</title>
+</head>
+<body>
+<header>
+    <img id="logo-instituto" src="C:\Users\felip\Downloads\Linguagens I\Aula01\logo-instituto.02efe61f.png" alt="Logo IF">
+</header>
+<form id="loginForm" onsubmit="return false;">
+    <label for="username">Nome de Usuário:</label>
+    <input type="text" id="username" name="username" required>
+    
+    <label for="password">Senha:</label>
+    <input type="password" id="password" name="password" required>
+    
+    <input type="submit" value="Entrar">
+    
+    <div class="forgot-password">
+        <a href="#">Esqueceu sua senha?</a>
+    </div>
+</form>
+<script>
+    document.getElementById('loginForm').addEventListener('submit', function() {
+        var username = document.getElementById('username').value;
+        var password = document.getElementById('password').value;
+        alert('Nome de usuário: ' + username + '\nSenha: ' + password);
+    });
+</script>
+</body>
+</html>

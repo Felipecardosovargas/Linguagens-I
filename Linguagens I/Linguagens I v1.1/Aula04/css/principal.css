@@ -1,0 +1,206 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container2 {
+    background-color: #333;
+    color: #fff;
+    margin-bottom: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+header {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+.logo {
+    height: 70px;
+}
+li{
+   list-style: none;
+}
+   
+   header, nav ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+   }
+   
+   nav ul li {
+    margin-left: 1rem;
+   }
+
+
+
+nav ul li:first-child {
+    margin-left: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold; 
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.topo {
+    margin-top: 180px;
+}
+
+.topo2{
+    margin-top: 100px;
+}
+
+#sobre {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1024px;
+    width: 100%;
+    margin: auto;
+    padding: 20px; 
+}
+
+#sobre img {
+    width: 100%;
+    max-width: 400px; 
+    height: auto;
+    margin-right: 20px;
+}
+
+#sobre div {
+    flex: 1;
+}
+
+#sobre h2,
+.produtos h2 {
+    color: #333;
+    border-bottom: 2px solid #333; 
+    margin-bottom: 25px;
+}
+
+.produtos {
+    max-width: 1024px;
+    width: 100%;
+    margin: auto;
+    margin-top: 40px;
+    padding: 20px; 
+}
+
+.produtos img {
+    width: 100%;
+    max-width: 250px;
+    height: auto; 
+    margin-bottom: 10px;
+}
+
+.produtos .produto {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px; 
+    justify-items: center; 
+}
+
+article {
+    text-align: center;
+}
+
+article button {
+    background-color: #333;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px; 
+    color: #fff;
+    margin: 15px 0;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 641px) and (max-width: 1023px) {
+    #sobre {
+        padding: 10px; 
+    }
+}
+
+@media screen and (max-width: 640px) {
+    #sobre img {
+        max-width: 100%; 
+        margin-right: 0; 
+        margin-bottom: 20px; 
+    }
+
+    #sobre div {
+        margin-top: 20px; 
+    }
+
+    .produtos .produto {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+    }
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-info {
+    display: flex;
+}
+
+.footer-logo img {
+    width: 100px;
+}
+
+.footer-contact,
+.footer-social {
+    margin-left: 30px;
+}
+
+.footer-contact h3,
+.footer-social h3 {
+    margin-bottom: 10px;
+}
+
+.footer-social ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-social ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.footer-social ul li:last-child {
+    margin-right: 0;
+}
+
+.footer-social ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-copyright {
+    text-align: center;
+    margin-top: 20px;
+}
